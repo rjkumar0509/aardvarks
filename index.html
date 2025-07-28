@@ -222,6 +222,36 @@ body::before {
         margin-right: 0;
       }
     }
+    .join-section {
+  background: #fff7f0;
+  padding: 4rem 1rem;
+}
+
+.join-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.join-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .join-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .join-text, .join-image {
+    flex: 1;
+    padding: 0 1rem;
+  }
+}
   </style>
 </head>
 <body>
