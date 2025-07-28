@@ -2,204 +2,320 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Albuquerque Aardvarks RFC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Albuquerque Aardvarks Rugby Club | New Mexico Rugby Powerhouse</title>
+  <meta name="description" content="Join the Albuquerque Aardvarks Rugby Club, a premier men's rugby team in New Mexico. Learn about our players, High Desert Rugby Tournament, club officers, sponsors, and how to get involved. Watch highlights, view match schedules, and experience the spirit of rugby in the Southwest." />
   <style>
+    :root {
+      --primary-color: #8B0000; /* Dark Red */
+      --accent-color: #FFD700; /* Yellow */
+      --text-color: #333;
+      --bg-color: #fff;
+    }
+
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Montserrat', sans-serif;
     }
 
     body {
-      background-color: #fff;
-      color: #111;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
       line-height: 1.6;
     }
 
     header {
-      background: url('https://images.unsplash.com/photo-1600284212240-9e564856a9b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-      height: 100vh;
+      background: var(--primary-color);
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #FFD700;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
+      padding: 1rem 0;
     }
 
     nav {
-      background: #B22222;
-      padding: 1rem;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
     }
 
     nav a {
-      color: #FFD700;
-      margin: 0.5rem 1rem;
+      color: var(--accent-color);
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      transition: background 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
-      color: #fff;
+      background: var(--accent-color);
+      color: var(--primary-color);
+    }
+
+    nav a.logo {
+      margin-right: auto;
+      padding: 0;
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .hero {
+      background: url('https://via.placeholder.com/1200x500/8B0000/FFD700?text=Team+Photo') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(139, 0, 0, 0.7);
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 8px;
     }
 
     section {
-      padding: 4rem 2rem;
+      padding: 3rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
 
-    .hero-cta {
-      margin-top: 1rem;
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 0.5rem;
+      font-weight: 700;
     }
 
-    .hero-cta a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #FFD700;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
     }
 
-    .hero-cta a:hover {
-      background-color: #FFEB3B;
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .cta-button {
+      background: var(--accent-color);
+      color: var(--primary-color);
+      padding: 1rem 2rem;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .cta-button:hover {
+      background: var(--primary-color);
+      color: var(--accent-color);
     }
 
     footer {
-      background: #111;
-      color: #FFD700;
+      background: var(--primary-color);
+      color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
     }
 
-    .section-title {
-      font-size: 2rem;
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin-top: 1rem;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
       margin-bottom: 1rem;
-      text-align: center;
-      color: #B22222;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
     }
 
-    .tournament-section {
-      background-color: #FFF5CC;
-      border: 2px solid #FFD700;
-      border-radius: 10px;
-      padding: 2rem;
-      margin-top: 2rem;
+    form input:focus, form textarea:focus {
+      border-color: var(--primary-color);
+      outline: none;
     }
 
-    a {
-      color: #B22222;
+    .officers, .players, .sponsors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
-    a:hover {
-      color: #000;
+    .card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-left: 6px solid var(--accent-color);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      transition: box-shadow 0.3s;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    th, td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a.logo {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#join">Join</a>
-    <a href="#teams">Teams</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#tournament">High Desert Tournament</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#sponsors">Sponsors</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <header>
-    <h1>Albuquerque Aardvarks RFC</h1>
-    <p>Rugby in the heart of New Mexico – All experience levels welcome! Join us and be part of the herd.</p>
-    <div class="hero-cta">
-      <a href="#join">Join the Team</a>
-      <a href="#tournament">High Desert Tournament</a>
-    </div>
+    <nav>
+      <a href="#" class="logo" aria-label="Albuquerque Aardvarks Home">
+        <img src="https://via.placeholder.com/60x40/8B0000/FFD700?text=Aardvarks" alt="Albuquerque Aardvarks Logo" />
+      </a>
+      <a href="#about">About</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#join">Join</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#tournament">Tournament</a>
+      <a href="#officers">Officers</a>
+      <a href="#players">Players</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#donations">Donations</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <p>The Albuquerque Aardvarks have been a staple of the New Mexico rugby scene since 1976. We are a competitive, social, and community-driven rugby club that welcomes players of all backgrounds and experience levels.</p>
+  <section class="hero" role="banner">
+    <h1>Welcome to the Albuquerque Aardvarks Rugby Club</h1>
   </section>
 
-  <section id="join">
-    <h2 class="section-title">Join the Aardvarks</h2>
-    <p>Looking to get involved? We welcome men, women, and youth to come train, play, and grow with us. Whether you're a seasoned player or brand new to rugby, we have a place for you.</p>
-    <ul>
-      <li><strong>Men’s & Women’s Training:</strong> Tues/Thurs 6pm at Johnson Field</li>
-      <li><strong>Youth Rugby:</strong> Saturdays 10am at Mesa Verde Park</li>
-    </ul>
-    <p>Email us at <a href="mailto:join@aardvarksrugby.com">join@aardvarksrugby.com</a> for more info.</p>
+  <section id="about" role="region" aria-labelledby="about-heading">
+    <h2 id="about-heading">About Us</h2>
+    <p><strong>History:</strong> Founded in 1973, the Albuquerque Aardvarks have a long-standing tradition of excellence and community involvement in New Mexico rugby.</p>
+    <p><strong>Mission:</strong> To promote the sport of rugby while fostering teamwork, discipline, and respect on and off the field.</p>
+    <p><strong>Achievements:</strong> Multiple regional titles, consistent playoff appearances, and a dedicated alumni network.</p>
   </section>
 
-  <section id="teams">
-    <h2 class="section-title">Our Teams</h2>
-    <p>We offer competitive and developmental teams for all levels:</p>
-    <ul>
-      <li>Men's Senior XV</li>
-      <li>Women's Senior XV</li>
-      <li>Youth Co-ed Program (ages 8–18)</li>
-    </ul>
+  <section id="schedule" role="region" aria-labelledby="schedule-heading">
+    <h2 id="schedule-heading">Upcoming Games</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Opponent</th><th>Location</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>August 10, 2025</td><td>Santa Fe Rugby</td><td>Santa Fe, NM</td></tr>
+        <tr><td>August 24, 2025</td><td>El Paso Rhinos</td><td>Albuquerque, NM</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Past Results</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Opponent</th><th>Score</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>July 6, 2025</td><td>Tucson Barbarians</td><td>W 28-17</td></tr>
+        <tr><td>July 13, 2025</td><td>Phoenix RFC</td><td>L 15-22</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <section id="schedule">
-    <h2 class="section-title">Schedule</h2>
-    <p>Stay tuned for our latest match dates and events throughout the season. You can also find us at local festivals and community events.</p>
-    <p>Next match: Sept 14 vs. Santa Fe RFC @ Johnson Field</p>
+  <section id="join" role="region" aria-labelledby="join-heading">
+    <h2 id="join-heading">Join the Team</h2>
+    <p>We welcome new players of all skill levels. Training sessions are held every Tuesday and Thursday at 6:30 PM at Johnson Field.</p>
+    <p>Contact us to get started and become part of our rugby family!</p>
+    <button class="cta-button" onclick="window.location.href='#contact'">Join Now</button>
   </section>
 
-  <section id="tournament" class="tournament-section">
-    <h2 class="section-title">High Desert Tournament</h2>
-    <p>The premier rugby event in the Southwest! The High Desert 7s brings teams from across the region for a day of fast-paced action and camaraderie. Held every spring at Balloon Fiesta Park.</p>
-    <ul>
-      <li><strong>Date:</strong> April 12–13, 2026</li>
-      <li><strong>Location:</strong> Balloon Fiesta Park, Albuquerque</li>
-      <li><strong>Team Registration:</strong> <a href="mailto:tournament@aardvarksrugby.com">tournament@aardvarksrugby.com</a></li>
-    </ul>
+  <section id="gallery" role="region" aria-labelledby="gallery-heading">
+    <h2 id="gallery-heading">Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200/8B0000/FFD700?text=Match+1" alt="Match 1" />
+      <img src="https://via.placeholder.com/300x200/8B0000/FFD700?text=Match+2" alt="Match 2" />
+      <img src="https://via.placeholder.com/300x200/8B0000/FFD700?text=Training" alt="Training Session" />
+      <img src="https://via.placeholder.com/300x200/8B0000/FFD700?text=Team+Huddle" alt="Team Huddle" />
+    </div>
   </section>
 
-  <section id="gallery">
-    <h2 class="section-title">Gallery</h2>
-    <p>Photos and videos from matches, social events, and tournaments. Coming soon!</p>
+  <section id="tournament" role="region" aria-labelledby="tournament-heading">
+    <h2 id="tournament-heading">High Desert Rugby Tournament</h2>
+    <p>The High Desert Rugby Tournament is hosted annually in Albuquerque, drawing top teams from across the region for a weekend of competitive play and camaraderie. Stay tuned for 2025 registration and volunteer opportunities!</p>
   </section>
 
-  <section id="sponsors">
-    <h2 class="section-title">Sponsors</h2>
-    <p>We are grateful for the support of our local business partners. Interested in sponsoring? Contact us at <a href="mailto:sponsor@aardvarksrugby.com">sponsor@aardvarksrugby.com</a></p>
+  <section id="officers" role="region" aria-labelledby="officers-heading">
+    <h2 id="officers-heading">Club Officers</h2>
+    <div class="officers">
+      <div class="card"><strong>President:</strong> Maria Chavez</div>
+      <div class="card"><strong>Vice President:</strong> Chris Montoya</div>
+      <div class="card"><strong>Coach:</strong> Robert "Bob" Jensen</div>
+      <div class="card"><strong>Treasurer:</strong> Leah Robinson</div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <p>Want to learn more or get involved? Reach out anytime.</p>
-    <p>Email: <a href="mailto:info@aardvarksrugby.com">info@aardvarksrugby.com</a></p>
-    <p>Follow us on <a href="https://facebook.com/aardvarksrugby" target="_blank">Facebook</a> and <a href="https://instagram.com/aardvarksrugby" target="_blank">Instagram</a></p>
+  <section id="players" role="region" aria-labelledby="players-heading">
+    <h2 id="players-heading">Meet the Players</h2>
+    <div class="players">
+      <div class="card">#8 - Jason “J-Rock” Thompson (Captain)</div>
+      <div class="card">#10 - Alex Garcia</div>
+      <div class="card">#13 - Mike “Speedy” Daniels</div>
+      <div class="card">#2 - Jorge Ramirez</div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Albuquerque Aardvarks RFC | Built with pride in New Mexico</p>
-  </footer>
-</body>
-</html>
+  <section id="sponsors" role="region" aria-labelledby="sponsors-heading">
+    <h2 id="sponsors-heading">Our Sponsors</h2>
+    <div class="sponsors">
+      <div class="card">Rugby Supply Co.</div>
+      <div class="card">505 Brewing Company</div>
+      <div class="card">Duke City Fitness</div>
+      <div class="card">Southwest Chiropractic</div>
+    </div>
+    <p>We are proud to partner with businesses that support local sports and community development. Want to be a sponsor? <a href="#contact">Contact us here</a>.</p>
+  </section>
+
+  <section id="donations" role="region" aria-labelledby="donations-heading">
+    <h2 id="donations-heading">Donations</h2>
+    <p>Your support helps keep the Albuquerque Aardvarks strong! Donations go towards equipment, travel, and community
