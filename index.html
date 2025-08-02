@@ -272,6 +272,87 @@ body::before {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+     .contact-card {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #6b8e23, #a9ba9d);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    color: #f4f6f3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .contact-card h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+  }
+  .contact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .logo-container {
+    flex: 0 0 150px;
+    text-align: center;
+  }
+  .logo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+  .contact-details {
+    flex: 1 1 300px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f4f6f3;
+  }
+  .contact-details a {
+    color: #dff0d8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .contact-details a:hover,
+  .contact-details a:focus {
+    color: #f0ead2;
+    text-decoration: underline;
+  }
+  .social-links a {
+    font-weight: 700;
+    margin-right: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    color: white;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+  }
+  .social-links a.facebook {
+    background-color: #1877f2;
+  }
+  .social-links a.facebook:hover,
+  .social-links a.facebook:focus {
+    background-color: #145dbf;
+  }
+  .social-links a.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  }
+  .social-links a.instagram:hover,
+  .social-links a.instagram:focus {
+    filter: brightness(1.1);
+  }
+  @media (max-width: 600px) {
+    .contact-wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    .contact-details {
+      text-align: center;
+    }
+  }
   </style>
 </head>
 <body>
@@ -674,24 +755,24 @@ body::before {
   <p>If you experience issues booking a referee, please contact southwest Rugby Referee Society <a href="mailto:sgushue@gmail.com">RefUp.io</a> or reach out to RefUp.io support.</p>
 </section>
 
-<section id="contact" role="region" aria-labelledby="contact-heading" style="max-width: 700px; margin: 0 auto; padding: 2rem;">
+<section id="contact" role="region" aria-labelledby="contact-heading" class="contact-card">
   <h2 id="contact-heading">📞 Contact Us</h2>
   <p>Have questions or want to get involved? Reach out to us anytime!</p>
   
-  <div style="margin-top: 1rem; font-size: 1.1rem; line-height: 1.6;">
-    <p><strong>Email:</strong> <a href="mailto:aardvarks@aardvarks-varx.com" style="color: #007bff;">aardvarks@aardvarks-varx.com</a></p>
-    <p><strong>Phone:</strong> <a href="tel:+5055065057" style="color: #007bff;">+1 5055065057</a></p>
-  </div>
-  
-  <div style="margin-top: 1.5rem;">
-    <p>Follow us on social media:</p>
-    <p>
-      <a href="https://www.facebook.com/abqrugby/" target="_blank" rel="noopener noreferrer" style="margin-right: 1.5rem; text-decoration: none; color: #1877f2; font-weight: bold;">
-        Facebook
-      </a>
-      <a href="https://www.instagram.com/aardvarkrugby/?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #e1306c; font-weight: bold;">
-        Instagram
-      </a>
-    </p>
+  <div class="contact-wrapper">
+    <div class="logo-container">
+      <img src="aardvark_logo.png" alt="Aardvarks Rugby Club Logo" />
+    </div>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:aardvarks@aardvarks-varx.com">aardvarks@aardvarks-varx.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+5055065057">+1 505 506 5057</a></p>
+      
+      <p style="margin-top: 1rem;">Follow us on social media:</p>
+      <p class="social-links">
+        <a href="https://www.facebook.com/abqrugby/" target="_blank" rel="noopener noreferrer" class="facebook">Facebook</a>
+        <a href="https://www.instagram.com/aardvarkrugby/?hl=en" target="_blank" rel="noopener noreferrer" class="instagram">Instagram</a>
+      </p>
+    </div>
   </div>
 </section>
+
