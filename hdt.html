@@ -102,35 +102,46 @@
       </video>
     </div>
 
- <section id="registration" style="margin-top: 3rem; text-align: center;">
-  <h2>🏉 Team & Player Registration</h2>
-  <p style="font-size: 1.1rem;">Ready to tackle the High Desert? Whether you're a full squad or just one rogue rugby beast — we've got a slot for you!</p>
+ <section id="team-registration" style="max-width: 600px; margin: 3rem auto; padding: 2rem; background: #f4f4f4; border-radius: 12px;">
+  <h2 style="text-align: center;">🏉 Team Registration Form</h2>
+  <form action="https://formsubmit.co/aardvarks@aardvarks-varx.com" method="POST">
+    <!-- Hidden inputs for FormSubmit -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    <input type="hidden" name="_subject" value="New High Desert Team Registration">
+    
+    <label for="team-name">Team Name:</label><br>
+    <input type="text" name="team-name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+    
+    <label for="division">Division:</label><br>
+    <select name="division" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
+      <option value="Men's">Men's</option>
+      <option value="Women's">Women's</option>
+      <option value="Mixed/Other">Mixed/Other</option>
+    </select><br>
 
-  <img src="rugby_goof.jpg" alt="Funny Rugby Player" style="max-width: 300px; margin: 1.5rem auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+    <label for="contact-name">Contact Person:</label><br>
+    <input type="text" name="contact-name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
 
-  <div style="margin-top: 2rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
-    <!-- Men’s Team Registration -->
-    <a href="http://www.paypal.me/aardvarksvarx/300" target="_blank" rel="noopener noreferrer"
-       style="padding: 1rem 1.5rem; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-      Register Men's Team 🧔
-    </a>
+    <label for="email">Email Address:</label><br>
+    <input type="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
 
-    <!-- Women’s Team Registration -->
-    <a href="http://www.paypal.me/aardvarksvarx/200" target="_blank" rel="noopener noreferrer"
-       style="padding: 1rem 1.5rem; background-color: #e1306c; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-      Register Women's Team 💪
-    </a>
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" name="phone" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
 
-    <!-- Individual Registration -->
-    <a href="http://www.paypal.me/aardvarksvarx/30" target="_blank" rel="noopener noreferrer"
-       style="padding: 1rem 1.5rem; background-color: #28a745; color: white; text-decoration: none; border-radius: 8px; font-weight: bold;">
-      Register as a Solo Player 🦓
+    <label for="notes">Notes or Special Requests:</label><br>
+    <textarea name="notes" rows="4" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea><br>
+
+    <!-- Submit Form -->
+    <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #007bff; color: white; border: none; border-radius: 6px; font-weight: bold;">Submit Info</button>
+  </form>
+
+  <!-- PayPal Button Link -->
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="https://www.paypal.me/aardvarksvarx" target="_blank" 
+       style="display: inline-block; padding: 0.75rem 1.25rem; background-color: #ffc439; color: #111; text-decoration: none; border-radius: 8px; font-weight: bold;">
+      💳 Pay Registration Fee via PayPal
     </a>
   </div>
-
-  <p style="margin-top: 1.5rem; font-style: italic; color: #555;">
-    No team? No problem. We'll slot you in like a surprise tackle from behind.
-  </p>
 </section>
       <footer>
         &copy; 2025 Albuquerque Aardvarks Rugby Club. All rights reserved.
@@ -139,6 +150,7 @@
   </div>
 </body>
 </html>
+
 
 
 
