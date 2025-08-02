@@ -125,8 +125,22 @@ body::before {
       cursor: pointer;
     }
 
-    .gallery img:hover {
+    .players img:hover {
       transform: scale(1.05);
+    }
+     .players {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .players img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .cta-button {
@@ -266,13 +280,15 @@ body::before {
       <img src="download.jpg" alt="Zia Symbol" class="zia-nav" />
       <a href="#about">About</a>
       <a href="#safesports">Aardvarks Safe Sports Policy</a>
+      <a href="#join">Join</a>
+      <a href ="#swr-union">Southwest Rugby Union Affiliation </a> 
       <a href="#cipp">USA Rugby - Player CIPP Registration</a>
       <a href="#schedule">Schedule</a>
-      <a href="#join">Join</a>
-      <a href="#gallery">Gallery</a>
+      <a href="#gallery">Aardvarks in Action</a>
       <a href="#tournament">Tournament</a>
       <a href="#officers">Officers</a>
       <a href="#players">Players</a>
+      <a href="#refs">Book a Referee</a>
       <a href="#sponsors">Sponsors</a>
       <a href="#donations">Donations</a>
       <a href="#contact">Contact</a>
@@ -316,7 +332,7 @@ body::before {
       and the <a href="https://uscenterforsafesport.org" target="_blank" rel="noopener noreferrer">U.S. Center for SafeSport</a>.
     </p>
 
-    <h3>✅ What This Means</h3>
+    <h3>What This Means</h3>
     <ul>
       <li><strong>Mandatory Training:</strong> All coaches, volunteers, and officials must complete SafeSport certification and remain in compliance each season.</li>
       <li><strong>Zero Tolerance:</strong> Harassment, bullying, abuse (emotional, physical, or sexual), and misconduct are not tolerated — under any circumstances.</li>
@@ -325,7 +341,7 @@ body::before {
       <li><strong>Ongoing Education:</strong> We provide guidance and resources so our community knows their rights, boundaries, and reporting options.</li>
     </ul>
 
-    <h3>📎 Resources</h3>
+    <h3>Resources</h3>
     <ul>
       <li><a href="https://www.usarugby.org/safesport" target="_blank" rel="noopener noreferrer">USA Rugby SafeSport Policy</a></li>
       <li><a href="https://uscenterforsafesport.org" target="_blank" rel="noopener noreferrer">U.S. Center for SafeSport</a></li>
@@ -358,6 +374,44 @@ body::before {
     </div>
   </div>
 </section>
+
+  <section id="swr-union" class="about-section">
+  <div class="container">
+    <h2>Our Affiliation with Southwest Rugby Union</h2>
+
+    <p>
+      The <strong>Albuquerque Aardvarks Rugby Club</strong> is a proud and active member of the 
+      <a href="https://southwestrugbyunion.org" target="_blank" rel="noopener noreferrer">Southwest Rugby Union (SWRU)</a>, 
+      the official governing body for senior club rugby across Arizona, New Mexico, West Texas, Las Vegas and surrounding regions.
+    </p>
+
+    <p>
+      SWRU operates under the national framework of <strong>USA Rugby</strong>, and provides structure, competition, 
+      and governance for men’s and women’s clubs across the Southwest. Our membership with SWRU ensures that we 
+      participate in sanctioned matches, follow consistent competition standards, and uphold the core values of the game.
+    </p>
+
+    <h3>What SWRU Provides</h3>
+    <ul>
+      <li>✅ Organized league competition for 15s and 7s seasons</li>
+      <li>✅ Playoff pathways and eligibility for regional and national tournaments</li>
+      <li>✅ Referee coordination and match sanctioning</li>
+      <li>✅ Disciplinary processes and player welfare oversight</li>
+      <li>✅ Support for SafeSport compliance and USA Rugby regulations</li>
+    </ul>
+
+    <p>
+      Through this affiliation, the Aardvarks stay connected to the wider rugby community, gain access to competitive 
+      opportunities, and continue to grow the game across New Mexico and the greater Southwest region.
+    </p>
+
+    <p>
+      Learn more at: 
+      <a href="https://southwestrugbyunion.com" target="_blank" rel="noopener noreferrer">southwestrugbyunion.com</a>
+    </p>
+  </div>
+</section>
+
 
  <section id="cipp" class="about-section">
   <div class="container">
@@ -414,14 +468,21 @@ body::before {
   
 
 <section id="officers" role="region" aria-labelledby="officers-heading">
-    <h2 id="officers-heading">Club Officers</h2>
-    <div class="officers">
-      <div class="card"><strong>President:</strong> Mateo Sigwerth</div>
-      <div class="card"><strong>Vice President:</strong> Joel Luevano</div>
-      <div class="card"><strong>15s and 7s Coaches:</strong> Larry Spurgin and Gabe Hidalgo</div>
-      <div class="card"><strong>Treasurer:</strong> Nick Scholz</div>
-    </div>
-  </section>
+  <h2 id="officers-heading">Club Officers</h2>
+
+  <!-- Club Officers Image -->
+  <div class="officers-image">
+    <img src="club_officers.jpg" alt="Albuquerque Aardvarks Club Officers Group Photo" style="max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem;" />
+  </div>
+
+  <!-- Officer Cards -->
+  <div class="officers">
+    <div class="card"><strong>President:</strong> Mateo Sigwerth</div>
+    <div class="card"><strong>Vice President:</strong> Joel Luevano</div>
+    <div class="card"><strong>15s and 7s Coaches:</strong> Larry Spurgin and Gabe Hidalgo</div>
+    <div class="card"><strong>Treasurer:</strong> Nick Scholz</div>
+  </div>
+</section>
   
   <section id="gallery" role="region" aria-labelledby="gallery-heading">
     <h2 id="gallery-heading">Aardvarks in Action</h2>
@@ -447,7 +508,7 @@ body::before {
   </section>
 
 
-<section id="gallery" role="region" aria-labelledby="gallery-heading">
+<section id="players" role="region" aria-labelledby="gallery-heading">
     <h2 id="gallery-heading">Meet the Players</h2>
     <div class="gallery">
       <img src="p1.jpg"/>
@@ -464,6 +525,36 @@ body::before {
       <img src="p12.jpg"/>
     </div>
   </section>
+
+  <section style="max-width: 800px; margin: 0 auto; padding: 2rem; font-family: Arial, sans-serif;">
+  <h2 style="color: #2c3e50;">🧑‍⚖️ Book a Referee for League Games & Tournaments</h2>
+  <p>All referees for official league matches and tournaments must be booked through <strong><a href="https://www.refup.io" target="_blank" style="color: #3498db;">RefUp.io</a></strong>.</p>
+
+  <h3 style="color: #34495e;">📅 How to Book:</h3>
+  <ol style="padding-left: 1.2rem;">
+    <li>Visit <a href="https://www.refup.io" target="_blank" style="color: #3498db;">https://www.refup.io</a></li>
+    <li>Log in or create an account.</li>
+    <li>Go to the <strong>“Book a Referee”</strong> section.</li>
+    <li>Enter match details:
+      <ul>
+        <li>Date & Time</li>
+        <li>Field Location</li>
+        <li>League or Tournament Name</li>
+        <li>Age Group & Game Level</li>
+      </ul>
+    </li>
+    <li>Submit the request and await confirmation.</li>
+  </ol>
+
+  <h3 style="color: #34495e;">🔁 Booking Timeline:</h3>
+  <ul style="padding-left: 1.2rem;">
+    <li><strong>Regular games:</strong> Book at least <strong>72 hours in advance</strong></li>
+    <li><strong>Tournament matches:</strong> Book at least <strong>1 week in advance</strong></li>
+  </ul>
+
+  <h3 style="color: #34495e;">📬 Need Help?</h3>
+  <p>If you have issues with booking, please contact us at <a href="mailto:refbookings@yourdomain.com" style="color: #3498db;">refbookings@yourdomain.com</a> or reach out to RefUp.io support.</p>
+</section>
 
   <section id="sponsors" role="region" aria-labelledby="sponsors-heading">
     <h2 id="sponsors-heading">Our Sponsors</h2>
