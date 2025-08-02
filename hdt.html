@@ -7,17 +7,27 @@
   <style>
     body::before {
       content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('varks_bg.jpg') center/cover no-repeat;
-  opacity: 0.1;
-  z-index: -1;
-}
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('varks_bg.jpg') center/cover no-repeat;
+      opacity: 0.15;
+      z-index: -1;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000; /* fallback background */
+      color: #f9f9f9;
+    }
+
     .container {
       max-width: 960px;
       margin: 0 auto;
+      padding: 2rem;
       text-align: center;
     }
 
@@ -64,6 +74,7 @@
       h1 {
         font-size: 1.5rem;
       }
+
       p {
         font-size: 1rem;
       }
@@ -71,25 +82,25 @@
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <header>
-        <h1>High Desert Rugby Tournament – <span style="font-size: 1rem;">Trademarked Serial: 98355918</span></h1>
-        <p><strong>Hosted by the Albuquerque Aardvarks</strong></p>
-      </header>
+  <div class="container">
+    <header>
+      <h1>High Desert Rugby Tournament – <span style="font-size: 1rem;">Trademarked Serial: 98355918</span></h1>
+      <p><strong>Hosted by the Albuquerque Aardvarks</strong></p>
+    </header>
 
-      <p>
-        Join us for an action-packed weekend of rugby in the heart of the Southwest!<br />
-        The High Desert Rugby Tournament brings together fierce competition, community spirit, and beautiful New Mexico landscapes.<br />
-        Stay tuned for team registration, scheduling, and volunteer sign-up details.
-      </p>
+    <p>
+      Join us for an action-packed weekend of rugby in the heart of the Southwest!<br />
+      The High Desert Rugby Tournament brings together fierce competition, community spirit, and beautiful New Mexico landscapes.<br />
+      Stay tuned for team registration, scheduling, and volunteer sign-up details.
+    </p>
 
-      <h2>🎬 Tournament Trailer</h2>
-      <div class="video-container">
-        <video >
-          <source src="Watermark_High Dirt Trailer 2025 - Copyright to Aardvarks.mp4" type="video/mp4" />
-        </video>
-      </div>
+    <h2>🎬 Tournament Trailer</h2>
+    <div class="video-container">
+      <video controls>
+        <source src="Watermark_High Dirt Trailer 2025 - Copyright to Aardvarks.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
  <section id="registration" style="margin-top: 3rem; text-align: center;">
   <h2>🏉 Team & Player Registration</h2>
@@ -128,6 +139,7 @@
   </div>
 </body>
 </html>
+
 
 
 
