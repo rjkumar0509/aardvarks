@@ -7,37 +7,49 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f7f9fc, #e6ecf3);
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #fff;
+      background: url('zia.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Overlay to make text more readable */
+    .overlay {
+      background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.6), rgba(20, 20, 20, 0.8));
+      min-height: 100vh;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .container {
       max-width: 960px;
       margin: 0 auto;
-      padding: 2rem;
       text-align: center;
     }
 
     header {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
     }
 
     h1 {
-      color: #004080;
+      color: #ffd700;
       margin-bottom: 0.25rem;
     }
 
     h2 {
-      color: #007bff;
+      color: #ffcc33;
       margin-top: 2rem;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      font-size: 1.2rem;
+      line-height: 1.7;
       margin-top: 1rem;
+      color: #f9f9f9;
     }
 
     .video-container {
@@ -48,41 +60,52 @@
       max-width: 100%;
       height: auto;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+      border: 2px solid #ffcc33;
     }
 
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
-      color: #666;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>High Desert Rugby Tournament -  ”Trademarked Serial number:  98355918”</h1>
-      <p><strong>Hosted by the Albuquerque Aardvarks</strong></p>
-    </header>
+  <div class="overlay">
+    <div class="container">
+      <header>
+        <h1>High Desert Rugby Tournament – <span style="font-size: 1rem;">Trademarked Serial: 98355918</span></h1>
+        <p><strong>Hosted by the Albuquerque Aardvarks</strong></p>
+      </header>
 
-    <p>
-      Join us for an action-packed weekend of rugby in the heart of the Southwest!
-      The High Desert Rugby Tournament brings together fierce competition, community spirit, and beautiful New Mexico landscapes. Stay tuned for team registration, scheduling, and volunteer sign-up details.
-    </p>
+      <p>
+        Join us for an action-packed weekend of rugby in the heart of the Southwest!<br />
+        The High Desert Rugby Tournament brings together fierce competition, community spirit, and beautiful New Mexico landscapes.<br />
+        Stay tuned for team registration, scheduling, and volunteer sign-up details.
+      </p>
 
-    <h2>🎬 Tournament Trailer</h2>
-    <div class="video-container">
-      <video controls poster="trailer_thumbnail.jpg">
-        <source src="Watermark_High Dirt Trailer 2025  - Copyright to Aardvarks.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <h2>🎬 Tournament Trailer</h2>
+      <div class="video-container">
+        <video controls poster="trailer_thumbnail.jpg">
+          <source src="Watermark_High Dirt Trailer 2025 - Copyright to Aardvarks.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <footer>
+        &copy; 2025 Albuquerque Aardvarks Rugby Club. All rights reserved.
+      </footer>
     </div>
-
-    <footer>
-      &copy; 2025 Albuquerque Aardvarks Rugby Club. All rights reserved.
-    </footer>
   </div>
 </body>
 </html>
-
-
