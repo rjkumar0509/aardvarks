@@ -103,46 +103,53 @@
   </video>
 </div>
 
- <section id="team-registration" style="max-width: 600px; margin: 3rem auto; padding: 2rem; background: #f4f4f4; border-radius: 12px;">
-  <h2 style="text-align: center;">🏉 Team Registration Form</h2>
-  <form action="https://formsubmit.co/aardvarks@aardvarks-varx.com" method="POST">
-    <!-- Hidden inputs for FormSubmit -->
-    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-    <input type="hidden" name="_subject" value="New High Desert Team Registration">
-    
-    <label for="team-name">Team Name:</label><br>
-    <input type="text" name="team-name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-    
-    <label for="division">Division:</label><br>
-    <select name="division" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;">
-      <option value="Men's">Men's</option>
-      <option value="Women's">Women's</option>
-      <option value="Mixed/Other">Mixed/Other</option>
-    </select><br>
+ <section id="team-registration" style="max-width: 700px; margin: 4rem auto; padding: 2.5rem; background: #ffffffee; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;">
 
-    <label for="contact-name">Contact Person:</label><br>
-    <input type="text" name="contact-name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+  <h2 style="text-align: center; color: #004080;">🏉 High Desert Tournament Team Registration</h2>
+  <p style="text-align: center; font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
+    Please complete your <strong>registration fee payment</strong> before submitting your team information.
+  </p>
 
-    <label for="email">Email Address:</label><br>
-    <input type="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-
-    <label for="phone">Phone Number:</label><br>
-    <input type="tel" name="phone" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
-
-    <label for="notes">Notes or Special Requests:</label><br>
-    <textarea name="notes" rows="4" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea><br>
-
-    <!-- Submit Form -->
-    <button type="submit" style="padding: 0.75rem 1.5rem; background-color: #007bff; color: white; border: none; border-radius: 6px; font-weight: bold;">Submit Info</button>
-  </form>
-
-  <!-- PayPal Button Link -->
-  <div style="margin-top: 2rem; text-align: center;">
+  <!-- PayPal Payment First -->
+  <div style="text-align: center; margin-bottom: 2.5rem;">
     <a href="https://www.paypal.me/aardvarksvarx" target="_blank" 
-       style="display: inline-block; padding: 0.75rem 1.25rem; background-color: #ffc439; color: #111; text-decoration: none; border-radius: 8px; font-weight: bold;">
+       style="display: inline-block; background-color: #ffc439; padding: 0.75rem 1.5rem; border-radius: 10px; text-decoration: none; color: #111; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.15); transition: background-color 0.3s ease;">
       💳 Pay Registration Fee via PayPal
     </a>
   </div>
+
+  <!-- Team Form -->
+  <form action="https://formsubmit.co/aardvarks@aardvarks-varx.com" method="POST" style="color: #333;">
+    <!-- FormSubmit Hidden Inputs -->
+    <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+    <input type="hidden" name="_subject" value="New High Desert Team Registration">
+
+    <label for="team-name">Team Name:</label>
+    <input type="text" name="team-name" required style="width: 100%; padding: 0.6rem; margin-bottom: 1.2rem; border-radius: 6px; border: 1px solid #ccc;">
+
+    <label for="division">Division:</label>
+    <select name="division" required style="width: 100%; padding: 0.6rem; margin-bottom: 1.2rem; border-radius: 6px; border: 1px solid #ccc;">
+      <option value="Men's">Men's</option>
+      <option value="Women's">Women's</option>
+      <option value="Mixed/Other">Mixed/Other</option>
+    </select>
+
+    <label for="contact-name">Contact Person:</label>
+    <input type="text" name="contact-name" required style="width: 100%; padding: 0.6rem; margin-bottom: 1.2rem; border-radius: 6px; border: 1px solid #ccc;">
+
+    <label for="email">Email Address:</label>
+    <input type="email" name="email" required style="width: 100%; padding: 0.6rem; margin-bottom: 1.2rem; border-radius: 6px; border: 1px solid #ccc;">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" name="phone" style="width: 100%; padding: 0.6rem; margin-bottom: 1.2rem; border-radius: 6px; border: 1px solid #ccc;">
+
+    <label for="notes">Notes or Special Requests:</label>
+    <textarea name="notes" rows="4" style="width: 100%; padding: 0.6rem; margin-bottom: 1.5rem; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+
+    <button type="submit" style="width: 100%; padding: 0.75rem; background-color: #007bff; color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+      ✅ Submit Team Info
+    </button>
+  </form>
 </section>
       <footer>
         &copy; 2025 Albuquerque Aardvarks Rugby Club. All rights reserved.
@@ -151,6 +158,7 @@
   </div>
 </body>
 </html>
+
 
 
 
