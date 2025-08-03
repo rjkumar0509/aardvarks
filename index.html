@@ -124,6 +124,21 @@ body::before {
       transition: transform 0.3s;
       cursor: pointer;
     }
+    .aardmex {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .aardmex img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
 
     .players img:hover {
       transform: scale(1.05);
@@ -645,10 +660,10 @@ body::before {
     </p>
   </div>
 
-  <div class="gallery">
-    <img src="varks_p1.jpg" alt="Aardvark Party in Mexico" />
-    <img src="varks_p2.jpg" alt="Aardvarks Playing Rugby in Mexico" />
-    <img src="varks_p3.jpg" alt="Aardvarks in action 1" />
+  <div class="aardmex">
+    <img src="vark_p1.jpg" alt="Aardvark Party in Mexico" />
+    <img src="vark_p2.jpg" alt="Aardvarks Playing Rugby in Mexico" />
+    <img src="vark_p3.jpg" alt="Aardvarks in action 1" />
     <img src="rugby_m1.jpg" alt="Aardvarks in action 2" />
     <img src="rugby_m2.jpg" alt="Aardvarks in action 3" />
     <img src="rugby_m3.jpg" alt="Aardvarks in action 4" />
