@@ -154,6 +154,48 @@
     ⚠️ <strong>Don't delay!</strong> Secure your team’s place today to be part of New Mexico’s premier fall rugby showdown!
   </p>
 </section>
+
+    <section id="match-schedule" 
+         style="max-width: 800px; margin: 4rem auto; padding: 2.5rem 3rem; 
+                background: #f0f8ff; border-left: 6px solid #0077cc; border-radius: 12px; 
+                box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+                
+  <h2 style="color: #005fa3; text-align: center; margin-bottom: 1.5rem;">🏉 Match Schedule</h2>
+
+  <p style="font-size: 1.15rem; line-height: 1.8; color: #333; text-align: center;">
+    Stay up to date with all the exciting matchups and kickoff times.  
+    Check out the full tournament schedule below!
+  </p>
+
+  <!-- Image container for the schedule -->
+  <div style="margin: 2rem auto; text-align: center;">
+    <img src="match-schedule-placeholder.jpg" alt="Match Schedule" 
+         style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+         
+    <!-- Upload button (requires JS to function) -->
+    <input type="file" id="scheduleUpload" accept="image/*" 
+           style="display: block; margin: 1.5rem auto; padding: 0.5rem 1rem; 
+                  border: 1px solid #0077cc; border-radius: 8px; cursor: pointer;">
+  </div>
+
+  <p style="font-size: 1.05rem; line-height: 1.7; color: #2e2e2e; text-align: center;">
+    📅 Make sure to bookmark this page for updates as we get closer to the big games!
+  </p>
+</section>
+
+<script>
+  // Simple script to preview uploaded image
+  document.getElementById('scheduleUpload').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.querySelector('#match-schedule img').src = e.target.result;
+      }
+      reader.readAsDataURL(file);
+    }
+  });
+</script>
    
     
     <hr style="margin: 2rem 0; border: none; border-top: 1px dashed #cc6600;">
@@ -246,6 +288,7 @@
   </div>
 </body>
 </html>
+
 
 
 
